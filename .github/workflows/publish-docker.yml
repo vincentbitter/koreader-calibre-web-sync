@@ -11,7 +11,6 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Build the Docker image
-        working-directory: path
         run: docker build . -t vincentbitter/koreader-calibre-web-sync:latest
 
       - name: Log into Docker Hub
