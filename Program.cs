@@ -48,4 +48,4 @@ app.UseSwaggerUI();
 
 Sync.Application.Setup.AddRoutes(app);
 
-app.Run("http://0.0.0.0:5157");
+app.Run();
