@@ -9,16 +9,9 @@ builder.Services.AddSwaggerGen(options =>
 {
     options.AddSecurityDefinition("user", new OpenApiSecurityScheme
     {
-        Description = "Username@url",
+        Description = "Username:Password@url",
         In = ParameterLocation.Header,
         Name = "x-auth-user",
-        Type = SecuritySchemeType.ApiKey
-    });
-    options.AddSecurityDefinition("pass", new OpenApiSecurityScheme
-    {
-        Description = "Password",
-        In = ParameterLocation.Header,
-        Name = "x-auth-key",
         Type = SecuritySchemeType.ApiKey
     });
     options.OperationFilter<AuthOperationsFilter>();
